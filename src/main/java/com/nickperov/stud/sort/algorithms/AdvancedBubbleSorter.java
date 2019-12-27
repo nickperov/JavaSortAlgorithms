@@ -6,24 +6,19 @@ public class AdvancedBubbleSorter extends Sorter {
 	public void makeSort(final boolean trace) {
 		final int size = this.list.length - 1;
 
-		int flag;
+		boolean flag;
 		int min;
 
 		for (int i = 0; i < size; i++) {
-			flag = 0;
+			flag = false;
 			min = i;
 			for (int j = i; j < size - i; j++) {
-				if (this.list[j] > this.list[j + 1]) {
-					final int temp = this.list[j];
-					this.list[j] = this.list[j + 1];
-					this.list[j + 1] = temp;
-					flag = 1;
-				}
+				flag = swapElements(j, flag);
 				if (this.list[j] < this.list[min]) {
 					min = j;
 				}
 			}
-			if (flag == 0) {
+			if (!flag) {
 				break;
 			}
 

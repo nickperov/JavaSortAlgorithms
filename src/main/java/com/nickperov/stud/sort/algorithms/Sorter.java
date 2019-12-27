@@ -43,4 +43,17 @@ public abstract class Sorter {
 
 	}
 
+	boolean swapElements(final int j, final boolean prevFlag) {
+		return swapElements(j, 1, prevFlag);
+	}
+
+	boolean swapElements(final int j, final int gap, final boolean prevFlag) {
+		if (this.list[j] > this.list[j + gap]) {
+			final int temp = this.list[j];
+			this.list[j] = this.list[j + gap];
+			this.list[j + gap] = temp;
+			return true;
+		}
+		return prevFlag;
+	}
 }

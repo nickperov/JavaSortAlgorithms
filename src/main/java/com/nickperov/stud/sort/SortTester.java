@@ -28,7 +28,7 @@ public class SortTester {
 	public static void main(final String[] args) {
 
 		final boolean trace = false;
-		final int[] list = generateList(500);
+		final int[] list = generateList(100000);
 
 		if (trace) {
 			System.out.println("Unsorted array");

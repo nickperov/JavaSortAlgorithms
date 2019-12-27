@@ -9,9 +9,7 @@ public class StupidSorter extends Sorter {
 		int i = 0;
 		while (i < size) {
 			if (this.list[i] > this.list[i + 1]) {
-				final int temp = this.list[i];
-				this.list[i] = this.list[i + 1];
-				this.list[i + 1] = temp;
+				swapElements(i, true);
 				i = 0;
 			} else {
 				i++;
